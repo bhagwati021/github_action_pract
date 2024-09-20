@@ -2,17 +2,17 @@ name: "hello world workflow/pipeline"
 
 #controls when the action will run.Triggers the workflow on push done to master or production branch
 on:
-    push:
-        branches:
-            -master
-            -production
+  push:
+    branches:
+      - master
+      - production
 
 jobs:
-    hello_world:
-        runs-on: ubuntu-latest
-        steps:
-            - name: "print hello world"
-              run: echo "Hello World"
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "print hello world"
+        run: echo "Hello World"
 
-            - name: "print the date"
-              run: date
+      - name: "print the date"
+        run: date
